@@ -1,0 +1,28 @@
+pragma solidity 0.4.18 <= 0.6.12;
+
+contract AmulMilkCustomerDetails{
+
+    string month;
+    string nameOfCustomer;
+    int numberOfPackets; 
+    int rate;
+    int totalPrice;
+    string addrs;
+    int phoneNumber;
+    
+    function AmulMilkCustomerDetails(string newMonth, string newNameOfCustomer, int newNumberOfPackets, int newRate, int newTotalPrice, string newAddrs, 
+    int newPhoneNumber) public {
+        
+        month = newMonth;
+        nameOfCustomer = newNameOfCustomer;
+        numberOfPackets = newNumberOfPackets;
+        rate = newRate;
+        totalPrice = newTotalPrice;
+        addrs = newAddrs;
+        phoneNumber = newPhoneNumber;
+    }
+    function getAmulMilkCustomerDetails() public view returns(string,string,int,int,int,string,int) {
+        return(month, nameOfCustomer, numberOfPackets, rate, totalPrice, addrs, phoneNumber);
+    }
+    
+}
